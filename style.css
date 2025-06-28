@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --dark-blur: #0a1d3c;
+  --light-grey: #e5e5e5;
+  --white: #fff;
+  --light-peach: #f9e3bc;
+  --dark-grey: #3e3f43;
+  --light-dark: #1d1d1d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* section one */
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  width: 80%;
+  height: 13vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 80%;
+  height: calc(100vh - 13vh);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.navlinks {
+  display: flex;
+}
+
+.header-img {
+  width: 30rem;
+}
+
+.logo {
+  font-size: 3.3rem;
+  color: var(--dark-blur);
+  font-family: "Allison", cursive;
+}
+
+.navlinks li {
+  list-style: none;
+}
+.navlinks a {
+  position: relative;
+  text-decoration: none;
+  margin-left: 2.5rem;
+  color: var(--dark-grey);
+  font-size: 1rem;
+  letter-spacing: 0.03rem;
+}
+
+.header-heading {
+  font-size: 4rem;
+  position: relative;
+}
+
+.header-heading::before {
+  content: "New";
+  position: absolute;
+  top: -54px;
+  color: var(--dark-blur);
+  font-family: "Allison", cursive;
+}
+
+.product-name {
+  font-size: 1.7rem;
+}
+
+.header-price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.primary-btn,
+.secondary-btn {
+  font-size: 1.1rem;
+  border: none;
+  padding: 1rem 1.5rem;
+  transition: 0.5s ease-in;
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.primary-btn {
+  background-color: var(--light-grey);
+}
+
+.secondary-btn {
+  background-color: var(--dark-blur);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.primary-btn:hover,
+.section-two-btn:hover,
+.section-four-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.navlinks li a::after,
+.navlinks li .active::after {
+  content: "";
+  background: var(--dark-grey);
+  position: absolute;
+  height: 0.15rem;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: 0.5s ease;
+  transform-origin: right;
+}
+
+.navlinks li a:hover::after,
+.navlinks li .active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.line {
+  background: var(--dark-grey);
+  width: 2.2rem;
+  height: 0.2rem;
+  margin: 0.38rem;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+/* section two */
+
+.section-two {
+  display: flex;
+  align-items: center;
+}
+
+.section-two-container {
+  background: var(--light-peach);
+  width: 100%;
+  height: 50vh;
+  transform: skewY(-6deg);
+}
+
+.section-two-image {
+  width: 28rem;
+}
+
+.section-two-inner-conatiner {
+  transform: skewY(6deg);
+  width: 80%;
+  margin: auto;
+}
+
+.section-two-conatiner,
+.section-two-inner-conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-two-heading {
+  color: var(--light-dark);
+  font-size: 3.8rem;
+}
+
+.section-two-para {
+  font-size: 1rem;
+  color: var(--dark-grey);
+  line-height: 1.3rem;
+  max-width: 80%;
+}
+
+.sectio-two-price {
+  font-size: 1.3rem;
+  color: var(--dark-grey);
+  margin: 0.9rem 0;
+}
+
+.section-two-btn {
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid var(--light-dark);
+  font-size: 1.1rem;
+  background: transparent;
+  transition: 0.5s ease;
+}
+
+/* section three */
+
+.section-heading {
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.card-image {
+  width: 17rem;
+}
+
+.card {
+  background: var(--light-grey);
+  padding: 0.5rem;
+}
+
+.card-pricing {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* section four */
+
+.section-four {
+  display: flex;
+  align-items: center;
+}
+
+.section-four-container {
+  background-attachment: fixed;
+  position: relative;
+  background-image: url(watch.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-four-offer {
+  font-size: 4rem;
+  color: var(--light-peach);
+  font-family: "Allison", cursive;
+  text-transform: uppercase;
+}
+
+.section-four-heading {
+  font-size: 4rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.section-four-btn {
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  background: var(--light-peach);
+  border: none;
+  transition: 0.5s ease-in;
+}
+
+.section-four-container::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+}
+
+.section-four-container .content {
+  z-index: 5;
+}
+
+/* section five */
+
+.grid-card-container {
+  width: 60%;
+  height: 75vh;
+  margin: auto;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: 15rem;
+}
+
+.grid-card {
+  background: var(--light-grey);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-card:nth-child(1) {
+  grid-row: 1/4;
+  background-image: url(rado\ watch.jpg);
+}
+.grid-card:nth-child(2) {
+  background-image: url(geneve\ watch.jpg);
+}
+
+.grid-card:nth-child(3) {
+  grid-row: 1/3;
+  background-image: url(tissot\ watch.jpg);
+}
+
+.grid-card:nth-child(4) {
+  grid-row: 3/4;
+  background-image: url(cartier\ watch.jpg);
+}
+.grid-card:nth-child(5) {
+  background-image: url(omega\ watch.jpg);
+}
+.grid-card:nth-child(6) {
+  background-image: url(fitron\ watch.jpg);
+}
+
+.grid-card::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
+}
+.grid-card:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.grid-card::after {
+  content: attr(collection);
+  position: absolute;
+  text-transform: uppercase;
+  background: var(--light-peach);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.7rem 1.2rem;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+.grid-card:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* footer section */
+
+footer {
+  background-color: var(--light-dark);
+  height: 20vh;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-txt {
+  padding: 10px;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 500px) {
+  /* Section one  */
+
+  .header-img {
+    display: none;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    top: 0;
+    position: absolute;
+    background: var(--light-grey);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    right: 100%;
+    z-index: 2;
+    gap: 2rem;
+    transition: 0.5s ease-in-out;
+  }
+
+  .navlinks-active {
+    right: 0;
+  }
+
+  .navlinks li a {
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 5;
+  }
+
+  .section .logo {
+    z-index: 5;
+  }
+
+  .header-heading {
+    font-size: 3rem;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+
+  /* section two.. */
+
+  .section-two-image {
+    display: none;
+  }
+
+  .section-two-heading {
+    font-size: 2.9rem;
+  }
+
+  .section-two-para {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .section-two-price {
+    font-size: 1.4rem;
+  }
+
+  .section-two-btn {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .section-two-container {
+    height: 60vh;
+  }
+
+  .section-two-inner-conatiner {
+    width: 90%;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* section four */
+
+  .section-four-heading {
+    font-size: 2.8rem;
+  }
+
+  .section-four-offer {
+    font-size: 3.3rem;
+  }
+
+  .section-four-btn {
+    font-size: 1rem;
+  }
+
+  /* section five */
+
+  .grid-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 90%;
+  }
+
+  .grid-card:nth-child(1),
+  .grid-card:nth-child(3) {
+    grid-row: 1/3;
+  }
+}
